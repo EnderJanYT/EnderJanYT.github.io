@@ -1,0 +1,101 @@
+//material icons
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+//variables
+:root {
+    --clr-dark-tr: hsla(0, 0%, 10%, 0.6);
+    --clr-light-tr: hsla(0,0%,90%, 0.6);
+    --clr-dark: hsl(0, 0%, 5%);
+    --clr-light: hsl(0,0%,95%);
+    --clr-shadow: hsla(0,0%,5%,.8);
+    --sz-space: 10px;
+    --sz-size: 40px;
+}
+//global styling
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+//general classes
+.bg-blur {
+    backdrop-filter: blur(15px);
+}
+div.container {
+    //background styling
+    background-image: url("https://wow.zamimg.com/uploads/screenshots/normal/980479.jpg");
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    //behavior
+    display: flex;
+    flex-direction: column;
+    //window manager styling
+    div.windows {
+        flex: 1 1 auto;
+    }
+    //panel styling
+    div.panel {
+        //looks
+        cursor: default;
+        background-color: var(--clr-dark-tr);
+        color: var(--clr-light);
+        box-shadow: 0 0 var(--sz-space) 0 var(--clr-shadow);
+        //behavior
+        display: flex;
+        //elements
+        div.button {
+            //looks
+            position: relative;
+            // padding: var(--sz-space);
+            margin: var(--sz-space);
+            border-radius: var(--sz-space);
+            height: var(--sz-size);
+            width: var(--sz-size);
+            //state styling
+            transition-duration: .2s;
+            &:hover {
+                background-color: var(--clr-light-tr);
+                color: var(--clr-dark);
+                box-shadow: 0 0 var(--sz-space) 0 var(--clr-shadow);
+            }
+            &:active {
+                background-color: var(--clr-light);
+            }
+            &.menu.open {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                margin-top: 0;
+                padding-top: calc(2 * var(--sz-space));
+            }
+            //content styling
+            span {
+                text-align: center;
+                width: 100%;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        div.tasks {
+            display: flex;
+        }
+        div.seperator.fill {
+            flex: 1 1 auto;
+        }
+    }
+}

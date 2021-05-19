@@ -1,0 +1,111 @@
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: white;
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+:root {
+  --clr-dark-tr: hsla(0, 0%, 10%, 0.6);
+  --clr-light-tr: hsla(0,0%,90%, 0.6);
+  --clr-dark: hsl(0, 0%, 5%);
+  --clr-light: hsl(0,0%,95%);
+  --clr-shadow: hsla(0,0%,5%,.8);
+  --sz-space: 10px;
+  --sz-size: 40px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.bg-blur {
+  backdrop-filter: blur(15px);
+}
+
+div.container {
+  background-image: url("https://wow.zamimg.com/uploads/screenshots/normal/980479.jpg");
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+div.container div.windows {
+  flex: 1 1 auto;
+}
+div.container div.panel {
+  cursor: default;
+  background-color: var(--clr-dark-tr);
+  color: var(--clr-light);
+  box-shadow: 0 0 var(--sz-space) 0 var(--clr-shadow);
+  display: flex;
+}
+div.container div.panel div.button {
+  position: relative;
+  margin: var(--sz-space);
+  border-radius: var(--sz-space);
+  height: var(--sz-size);
+  width: var(--sz-size);
+  transition-duration: 0.2s;
+}
+div.container div.panel div.button:hover {
+  background-color: var(--clr-light-tr);
+  color: var(--clr-dark);
+  box-shadow: 0 0 var(--sz-space) 0 var(--clr-shadow);
+}
+div.container div.panel div.button:active {
+  background-color: var(--clr-light);
+}
+div.container div.panel div.button.menu.open {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+  padding-top: calc(2 * var(--sz-space));
+}
+div.container div.panel div.button span {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div.container div.panel div.tasks {
+  display: flex;
+}
+div.container div.panel div.seperator.fill {
+  flex: 1 1 auto;
+}
