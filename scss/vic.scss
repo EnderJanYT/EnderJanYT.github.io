@@ -109,6 +109,8 @@ body {
     .reviews {
         margin-top: 5px;
         .review {
+            font-size: 17px;
+            line-height: 20px;
             margin-bottom: 30px;
             display: flex;
             .profile {
@@ -140,6 +142,7 @@ body {
                     .time {
                         margin-left: $base-size;
                         opacity: .5;
+                        line-height: 20px;
                     }
                 }
             }
