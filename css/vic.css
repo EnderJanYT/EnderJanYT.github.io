@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 95%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 450px;
+  min-width: 350px;
+  width: 95%;
+  min-height: 100%;
+  box-shadow: 0 0 10px 0 hsla(0deg, 0%, 0%, 0.1);
+  overflow: auto;
+}
+.content > div {
+  padding: 10px;
+  border-bottom: 1px solid hsla(0deg, 0%, 0%, 0.1);
+}
+.content > div:last-child {
+  border-bottom: none;
+}
+.content .header {
+  padding-bottom: 10px;
+}
+.content .header .title {
+  font-size: 25px;
+}
+.content .header .info {
+  display: flex;
+  line-height: 30px;
+}
+.content .header .info .rating {
+  color: hsl(0deg, 0%, 40%);
+}
+.content .header .info .stars {
+  margin-left: 10px;
+}
+.content .header .info .stars span {
+  line-height: 30px;
+  color: hsl(0deg, 0%, 60%);
+}
+.content .header .info .stars span.active {
+  color: hsl(41deg, 100%, 55%);
+}
+.content .header .info .ratings {
+  margin-left: 10px;
+  color: rgb(0, 132, 209);
+}
+.content .header .type {
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+.content .links {
+  display: flex;
+}
+.content .links a {
+  text-decoration: none !important;
+  text-align: center;
+  flex: 1 0 auto;
+}
+.content .links a .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid rgb(0, 132, 209);
+  margin: 0 auto;
+  position: relative;
+}
+.content .links a .icon span {
+  width: 100%;
+  transform: translateY(25%);
+  font-size: 30px;
+  color: rgb(0, 132, 209);
+}
+.content .links a .label {
+  color: rgb(0, 132, 209);
+}
+.content .links a:hover .icon {
+  box-shadow: 0 0 10px 0 hsla(0deg, 0%, 0%, 0.2);
+}
+.content .links a:first-child .icon {
+  background-color: rgb(0, 132, 209);
+}
+.content .links a:first-child .icon span {
+  color: #fff;
+}
+.content .reviews {
+  margin-top: 5px;
+}
+.content .reviews .review {
+  margin-bottom: 30px;
+  display: flex;
+}
+.content .reviews .review .profile {
+  padding-right: 10px;
+}
+.content .reviews .review .profile .profile_icon {
+  background-color: rgb(202, 0, 209);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+}
+.content .reviews .review .text .name {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.content .reviews .review .text .info {
+  display: flex;
+}
+.content .reviews .review .text .info .stars span {
+  color: hsl(0deg, 0%, 60%);
+}
+.content .reviews .review .text .info .stars span.active {
+  color: hsl(41deg, 100%, 55%);
+}
+.content .reviews .review .text .info .time {
+  margin-left: 10px;
+  opacity: 0.5;
+}/*# sourceMappingURL=vic.css.map */
